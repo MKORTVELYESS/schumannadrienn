@@ -1,3 +1,5 @@
+import PhoneButton from "./PhoneButton";
+
 import type { FormEvent } from "react";
 import { useState } from "react";
 interface SendEmailResponse {
@@ -94,12 +96,7 @@ export default function ContactForm() {
         >
           Üzenet küldése
         </button>
-        <a
-          href="tel:+36704103545"
-          className="flex-1 border border-gray-200 py-2 rounded-lg text-center"
-        >
-          Telefon: +36 70 410 3545
-        </a>
+        <PhoneButton />
       </div>
     </form>
   );

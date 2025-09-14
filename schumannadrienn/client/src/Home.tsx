@@ -1,9 +1,11 @@
 import "./Home.css";
-import ServiceCard from "./ServiceCard";
-import ContactForm from "./ContactForm";
+import ServiceCard from "./components/ServiceCard";
+import ContactForm from "./components/ContactForm";
 
 //import React from "react";
 import { motion } from "framer-motion";
+import PhoneButton from "./components/PhoneButton";
+import AnchorButton from "./components/AnchorButton";
 
 // Single-file React component for schumannadrienn.com
 // Tailwind CSS utility classes are used for styling (no extra imports required here).
@@ -30,12 +32,11 @@ export default function Home() {
           <a href="#about" className="hover:underline">
             Rólam
           </a>
-          <a
+          <AnchorButton
             href="#contact"
-            className="text-white bg-rose-600 px-4 py-2 rounded-lg shadow hover:brightness-95"
-          >
-            Foglalás
-          </a>
+            className="px-4 py-2"
+            textContent="Foglalás"
+          />
         </nav>
       </header>
 
@@ -56,12 +57,11 @@ export default function Home() {
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-              <a
+              <AnchorButton
                 href="#services"
-                className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg shadow"
-              >
-                Szolgáltatások
-              </a>
+                className="inline-block px-5 py-3"
+                textContent="Szolgáltatások"
+              />
               <a
                 href="#contact"
                 className="inline-block border border-rose-600 text-rose-600 px-5 py-3 rounded-lg"
@@ -108,18 +108,13 @@ export default function Home() {
                 mindig a bizalomról és a célok feltérképezéséről szól.
               </p>
               <div className="mt-4 flex gap-3">
-                <a
+                <AnchorButton
                   href="#contact"
-                  className="flex-1 text-center bg-rose-600 text-white py-2 rounded-lg"
-                >
-                  Időpont kérés
-                </a>
-                <a
-                  href="#contact"
-                  className="flex-1 text-center border border-gray-200 py-2 rounded-lg"
-                >
-                  Telefon: +36 70 410 3545
-                </a>
+                  className="flex-1 text-center py-2"
+                  textContent="Időpont kérés"
+                />
+
+                <PhoneButton />
               </div>
             </div>
           </motion.div>
@@ -244,7 +239,7 @@ export default function Home() {
               <div className="w-full h-48 md:h-64 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2676.301534907225!2d19.07888947619045!3d47.53198509312734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741db942ae638d3%3A0x89459a235eb08ffa!2sBudapest%2C%20B%C3%A9ke%20u.%205%2C%201131!5e1!3m2!1sen!2shu!4v1757781147172!5m2!1sen!2shu"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2693.8398165289!2d19.0814644!3d47.5319815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741db942ae638d3%3A0x89459a235eb08ffa!2sBudapest%2C%20B%C3%A9ke%20u.%205%2C%201131!5e0!3m2!1sen!2shu!4v1757831623012!5m2!1sen!2shu"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Google Maps"
